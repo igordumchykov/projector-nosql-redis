@@ -2,6 +2,10 @@
 - Tests [Redis eviction policies](https://redis.io/docs/reference/eviction/)
 - Tests [probabilistic early expiration](https://en.wikipedia.org/wiki/Cache_stampede)
 
+# Prerequisites
+1. Docker
+2. java 18
+
 # Run Redis cluster
 ```shell
 docker-compose up -d
@@ -120,8 +124,6 @@ evicted all keys
 If set maxmemory, get an error: OOM command not allowed when used memory > 'maxmemory'
 If set maxmemory 0, all keys are evicted
 ```
-
-
 
 # Probabilistic early expiration
 ### Redis [wrapper](redis/src/main/kotlin/com/jdum/projector/nosql/redis/ProbabilisticExpirationCache.kt)
